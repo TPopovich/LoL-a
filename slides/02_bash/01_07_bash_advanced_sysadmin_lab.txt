@@ -1,0 +1,39 @@
+Bash: advanced sysadmin Lab
+
+System monitor
+uptime  - gives info on how long system is up:
+
+tpop@asrock3:~$ uptime
+ 21:24:41 up 8 days,  4:37,  0 user,  load average: 0.00, 0.00, 0.00
+
+
+Lsof – tools to look at what process files are in use and things like ports
+
+tpop@asrock3:~$ while true ; do sleep 1 ; done &
+[1] 295
+tpop@asrock3:~$
+tpop@asrock3:~$
+
+tpop@asrock3:~$ lsof -p 295
+COMMAND PID USER   FD   TYPE DEVICE SIZE/OFF  NODE NAME
+bash    295 tpop  cwd    DIR   8,16     4096   673 /home/tpop
+bash    295 tpop  rtd    DIR   8,16     4096     2 /
+bash    295 tpop  txt    REG   8,16  1446024  1448 /usr/bin/bash
+bash    295 tpop  mem    REG   8,16   360460  1782 /usr/lib/locale/C.utf8/LC_CTYPE
+bash    295 tpop  mem    REG   8,16       50  1821 /usr/lib/locale/C.utf8/LC_NUMERIC
+…
+
+
+
+top - 21:26:38 up 8 days,  4:39,  0 user,  load average: 0.00, 0.00, 0.00
+Tasks:   7 total,   1 running,   6 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :  48085.5 total,  47720.2 free,    644.9 used,    139.6 buff/cache
+MiB Swap:  12288.0 total,  12288.0 free,      0.0 used.  47440.6 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0    1804   1188   1104 S   0.0   0.0   0:00.05 init
+    7 root      20   0    1812     88      0 S   0.0   0.0   0:00.00 init
+    8 root      20   0    1812     96      0 S   0.0   0.0   0:00.15 init
+
+    

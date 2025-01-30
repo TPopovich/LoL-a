@@ -1,0 +1,43 @@
+Quiz: Bash Commands (1)
+
+1) Given an editor like VIM  or just use the command cat use it to display file ~/.bashrc  
+Hint: ~ maps to your home directory and specified the filename using a shorthand.
+Hint: VIM is an editor we will study later.  Cmd "cat" will display file content to the terminal.
+
+2) After typing the following commands what is the folder after the final step. 
+cd /
+pwd
+cd
+pwd
+ls
+
+#  Can we figure out what cd by itself does?  Did it go to any folder?
+
+3) Figure what does "cd -" do, do this to experiment:
+cd ~
+pwd
+cd /
+pwd
+cd -
+pwd
+
+# Hint: do another "cd -" and look at the current folder pathname.
+#
+# What does cd - do?
+
+4) Given the last exercise, explore hidden files, why does command
+   ls
+not show file .bashrc  (yet we know it is there from exercise 1)?  Do the following to figure:
+
+cd
+ls 
+[ -f .bashrc ]  ||  echo “file not found”
+# if the above works as it does not print file not found.  Q: why?
+Look up information by doing 
+   info ls
+or
+   man ls
+to discover how to show hidden files
+# Hint: ~ maps to your home directory and specified the filename using a shorthand.
+
+5) Redo #1 above showing file content using, cat/less/head to will show file content on terminal

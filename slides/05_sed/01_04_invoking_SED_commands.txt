@@ -1,0 +1,21 @@
+Invoking Sed Commands
+
+Example of Invoking SED on Bash Command line
+-n flag for SED
+Unless you instruct it not to, sed sends all lines — ones selected or not
+to standard output. 
+
+When you use the –n option on the command line, sed sends only certain lines, 
+such as those selected by a Print (p) instruction, to standard output.
+
+$ sed -n ‘3,6 p’  my_lines.txt
+
+^--- That will print lines 3-6 of the file.
+
+-f flag for SED 
+When you use a lot of sed actions it is hard to specify on the cmd line.
+The –f option on the command line, tells sed to read the cmd script
+from a file you specify.
+We will see AWK has a similar flag as well.
+$ echo ‘3,6 p’  > print_lines_3_6.sed
+$ sed –n –f print_lines_3_6.sed my_lines.txt

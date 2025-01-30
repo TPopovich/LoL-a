@@ -1,0 +1,21 @@
+Quiz: Sed Commands (1)
+
+Example of Invoking SED on Bash Command line
+1) Given a file print line 5 and lines 7-9 in SED
+Hint: SED can take any number of commands and processes them in order,
+And you can target command on 0,1,2 target components. 
+
+2) Given a file print all line EXCEPT the LAST line in SED
+Hint: $ is a pseudo line, SED is same as in VIM, that $ means the last line
+
+3) Given a file print all lines one time except the LAST line (print 3 times) in SED w/o using the Hold Buffer
+Hint: SED can take any number of commands and
+ processes the sed script lines in order,
+And you can target command on 0,1,2 target components.
+SED allows the inverse by using an extra character, research what that is.
+
+4) Given a file print all lines and print the LAST line THRICE in SED using the Hold Buffer
+Hint: SED can take any number of commands and
+ processes them in order, 
+ If you want to process multiple actions on one target you can use { } and semicolon to group if you want
+

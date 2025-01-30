@@ -1,0 +1,27 @@
+Bash: File Permissions Lab
+
+File Permissions
+Next, we look into detail concerning Linux file permissions, which are central to how access control works. Later we will, review runtime permissions and how they are derived from file permissions.
+
+File permissions are central to Linux’s concept of access to resources. Nearly everything is a file in Linux, more or less. Let’s first review some terminology and then discuss the representation of the metadata around file access and permissions in detail.
+
+There are three types or scopes of permissions, from narrow to wide:
+User – This is the owner of the file
+Group -- Has one or more members
+Other – Means permissions for everyone else
+
+Furthermore, there are three types of access:
+Read (r)
+For a normal file, this allows a user to view the contents of the file. For a directory, it allows a user to view the names of files in the directory.
+Write (w)
+For a normal file, this allows a user to modify and delete the file. For a directory, it allows a user to create, rename, and delete files in the directory.
+Execute (x)
+For a normal file, this allows a user to execute the file if the user also has read permissions on it. For a directory, it allows a user to access file information in the directory, effectively permitting them to change into it (cd) or list its content (ls).
+
+Other File Access Bits – for special purpose
+s is the setuid/setgid permission applied to an executable file. A user running it inherits the effective privileges of the owner or group of the file.
+This is linux’s way to run elevated programs. On windows you get a popup asking for elevated running.  On linux you can set-userid to run the program as the “owner” of the file, same w/ set-groupid
+Example
+tpop@asrock3:~$ ls -l
+-rw-     r--          r--           1                           tpop tpop  0 Jan 11 14:13 1.txt
+[User]  [Group]  [Other]    [HardLinkCount]    [user]

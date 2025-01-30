@@ -1,0 +1,34 @@
+Bash: Printing and Shell Logging Lab
+
+Print in the Shell
+Next, we look at how to print.  The original way to print and the classic way is to use echo – this varies across different implementations of Unix and Linux.
+
+Better, it is to use printf (this is a copy of C’s printf and gives more options and even supports C style octal and hex numbers)
+
+tpop@asrock3:~$ printf '%d\n' 011
+9
+tpop@asrock3:~$ printf '%d\n' 0x11
+17
+tpop@asrock3:~$ echo  0x11
+0x11
+
+Script Command = Logs all interaction of the shell = PRO TIP logging tools
+tpop@asrock3:~$ script
+Script started, output log file is 'typescript'.
+tpop@asrock3:~$ #this is a subshell
+tpop@asrock3:~$ export XX=8
+tpop@asrock3:~$ echo $XX
+8
+tpop@asrock3:~$ exit
+exit
+Script done.
+tpop@asrock3:~$ echo $XX  # should error as XX was set in a subshell
+
+tpop@asrock3:~$ ls typescript
+typescript
+tpop@asrock3:~$ col -b < typescript > typescript.txt
+tpop@asrock3:~$
+
+When you enter command “script” it launches a subshell (you exit it with content of all interaction logged to “typescript”).
+PRO TIP: Always do the “col –b” as shown to clean up the file to be easily editor friendly.
+

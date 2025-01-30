@@ -1,0 +1,21 @@
+Quiz: Sed Commands (2)
+
+Example of Invoking SED on Bash Command line cont
+ $ sed -n ‘3,6 p’  my_lines.txt
+
+^--- That will print lines 3-6 of the file.
+
+-f flag for SED 
+When you use a lot of sed actions it is hard to specify on the cmd line.
+The –f option on the command line, tells sed to read the cmd script
+from a file you specify.
+We will see AWK has a similar flag as well.
+$ echo ‘3,6 p’  > print_lines_3_6.sed
+$ sed –n –f print_lines_3_6.sed my_lines.txt
+
+1) Given the above info… Using SED mimic grep, write a sed program that will print all lines matching /one/ in file
+Extra Credit: repeat the above and write a SED program that prints all lines NOT matching /one/
+
+2) Write a sed command that copies a file to standard output, removing all blank lines (i.e., lines with no characters on them)
+.
+HINT: regex /^$/ matches a blank line for the purpose of this exercise

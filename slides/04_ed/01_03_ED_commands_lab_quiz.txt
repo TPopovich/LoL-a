@@ -1,0 +1,15 @@
+Quiz: ED Commands
+
+Examples of Invoking ED on Bash Command line
+1) Given a file print lines 7-9 in ED
+Hint: ED can use the p command to print lines
+
+2) Write a script that uses ED from last step to take a parameter and give the filename on the command line.
+Hint: we want to run $ bash run_script.sh  sample_file.txt 
+
+3) Write a loop to call the ED script from quiz question 2 by doing the following and test it on sample files:
+ a script that uses ED from last step to take a parameter and give the filename on the command line.
+Hint: for I in *; do bash run_script.sh  $I ; done   
+# and test that it works.
+# look at command head -3 *.txt  to look at all files in folder and review output.
+

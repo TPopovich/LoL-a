@@ -1,0 +1,18 @@
+Basic Sed Commands
+
+Substitution Command
+The 's' command is used to substitute text within a stream, allowing for efficient text modifications.
+s/apple/pear/g
+s/new/old/g
+
+Deletion Command
+The 'd' command allows users to delete specific lines or patterns from a text stream, enhancing text management.
+
+Stacking Multiple Text Manipulation Commands
+Mastering stacking multiple basic sed commands.
+1,2d
+s/old/new/g
+s/line/space/
+Target for Operations is sometimes needed
+Mastering the “Target”  of basic sed commands on next page
+

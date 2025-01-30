@@ -1,0 +1,17 @@
+Bash: FileSystem Lab
+
+File System
+
+The filesystem has two different types of objects: directories and files. Think of directories to organize files and directories, allowing you to group files. Comparing to a real-world tree, directories are the nodes in the tree, and the leaves are either files or directories.
+
+You can navigate a filesystem by changing into that directory (cd or pushd), listing the content of a directory (ls), and printing the current working directory (pwd).
+
+Permissions are built-in: one of the attributes a filesystem captures is ownership (user and group name). Consequently, ownership enforces access to files and directories via the assigned permissions.
+
+Another term you’ll see in filesystems is that of links. Sometimes you want to refer to files with different names or provide shortcuts. There are two types of links in Linux:
+
+Hard links
+These reference inodes (a number) and can’t refer to directories (which are basically just a list of names and an inode number). Hard Links also do not work across filesystems.
+
+Symbolic links, or symlinks
+These are special files with their content being a literal string representing the path of another file.

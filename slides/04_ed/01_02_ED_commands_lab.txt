@@ -1,0 +1,27 @@
+ED lab (2)
+
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed$ cat fix_file_param.sh
+:
+ed “${1?'USAGE: fix_file_param.sh filename’}”  <<EOF
+,p
+1
+s/regular expression/regex/g
+w
+q
+EOF
+
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed/2$ bash fix_file_param.sh
+fix_file_param.sh: line 2: 1: USAGE: fix_file_param.sh filename
+
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed/2$ bash fix_file_param.sh sample_file.txt
+270
+[line ]1 zegrep (1)           - search possibly compressed files for a regular expression
+[line ]2 zfgrep (1)           - search possibly compressed files for a regular expression
+[line ]3 zgrep (1)            - search possibly compressed files for a regular expression
+[line ]1 zegrep (1)           - search possibly compressed files for a regular expression
+257
+
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed/2$ cat sample_file.txt
+[line ]1 zegrep (1)           - search possibly compressed files for a regex
+[line ]2 zfgrep (1)           - search possibly compressed files for a regular expression
+[line ]3 zgrep (1)            - search possibly compressed files for a regular expression

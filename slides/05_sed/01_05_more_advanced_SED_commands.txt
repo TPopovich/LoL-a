@@ -1,0 +1,36 @@
+More Advanced SED
+
+r  (like in ex/ed/vi read in a file)
+The sed r command takes filename and reads it into the stream, this is handy for boiler plate.
+
+a  (append works but the syntax is funny with \ char to add additional lines)
+The sed a command appends.
+
+$ sed '
+${
+a\
+next to last\
+last line
+}'  my_lines.txt
+
+takes filename given and writes it to stdout, and appends 2 lines to the "last line" via the $ 
+The \ must be the last char on the line.
+
+
+input line-by-line and processes it.  Sometimes we need to “save” or accumulate data into a “hold-ing” area.  VIM has registers that you can “hold” data and this is the same concept.
+…commands reviewed up to this point work with the Pattern space, a buffer that initially holds the line of input that sed just read. The Hold space can hold data while you manipulate data in the Pattern space; it is a temporary buffer. Until you place data in the Hold space, it is empty.
+
+ sample script showing shell multiline (multi statements) and good practice shell $$
+Copies a updated to a file and shows off the $$ unique value as well, as we don’t want to clobber any existing file.
+$$ in the shell is the process id and is pseudo random.
+ 
+for I in *; do
+  sed ‘s/process/PROCESS/g
+        s/agency/AGENCY/g
+        s/greeting/GREETING/g’  < $I > /tmp/$i.$$
+  mv /tmp/$i.$$   $I
+ done
+
+ q
+Quit when the line matches.
+

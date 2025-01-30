@@ -1,0 +1,19 @@
+ED lab (1)
+
+Example file for editing
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed$ cat > sample_file.txt
+[line ]1 zegrep (1)           - search possibly compressed files for a regular expression
+[line ]2 zfgrep (1)           - search possibly compressed files for a regular expression
+[line ]3 zgrep (1)            - search possibly compressed files for a regular expression
+^D
+
+# Edit a fixed file as a script – note the HERE document <<EOF … EOF use
+tpop@asrock3:/mnt/c/work/git/LoL-a/slides/04_ed$ cat fix_file.sh
+:
+ed sample_file.txt <<EOF
+,p
+1
+s/regular expression/regex/g
+w
+q
+EOF

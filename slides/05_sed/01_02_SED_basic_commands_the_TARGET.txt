@@ -1,0 +1,22 @@
+Basic Sed Commands, the target
+
+Target of Command
+The sed command can take a target: where you specify zero, one, or two addresses. An address can be a regular expression describing a pattern, a line number, or a line addressing symbol like $.
+
+ 0 Target
+If no address is given, then the command is applied to each line.
+
+ 1 Target
+If there is only one address, the command is applied to any line matching the address if a regex, usually it is a number meaning that line number
+
+ 2 Target
+If two comma-separated addresses are specified, the command is performed on the first line matching the first address and all succeeding lines up to and including a line matching the second address.
+
+ Not – inverses the Target
+When an address is followed by (!), an exclamation mark, it means binary not. The command is applied to all lines that do not match the address.
+Example of Command Target
+$!d   = delete all lines except the last line.
+3d    = delete the third line
+1,3d  = delete lines 1-3
+
+

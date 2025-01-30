@@ -1,0 +1,28 @@
+Bash: Signals Lab
+
+Signals
+Signals were originally developed as a way for the kernel to notify user space processes about a certain event. Think of signals as an asynchronous notification sent to a process. There are many signals available (use the man 7 signal command to learn more), and most of them come with a default action, such as stop or terminate the process.
+
+With most signals, you define a custom handler, some SIGKILL (kill -9) can not have a custom handler. This is useful when you want to, for example, do some clean-up work or simply ignore certain signals, i.e. ignore a ^C from end user.
+
+Common signals
+SIGKILL Kill signal (via kill command) Terminate process / Cannot be handled
+SIGHUP ()  = Terminate process / Tell a daemon process to reread its config file
+SIGINT (Ctrl+C) = Terminate process, User interruption from keyboard
+SIGQUIT (Ctrl+\) = User quit from keyboard/ Cause a core dump
+
+
+By default, kill sends the SIGTERM to the process, and the default action is to terminate the process gracefully. 
+(A good way to kill processes is to do a normal kill and if after a while it is not exiting, do  a kill -9 process
+which can not be stopped and nukes a process “now”.)
+
+tpop@asrock3:~$ while true ; do sleep 1 ; done &
+[1] 276
+
+tpop@asrock3:~$
+
+tpop@asrock3:~$ kill 276 ; # or kill %1
+tpop@asrock3:~$
+[1]+  Terminated              while true; do
+    sleep 1;
+Done

@@ -1,0 +1,23 @@
+Bash: Where and What Lab
+
+To learn about a command, how the shell interprets it, and where the executable file is located, use:
+
+type somecommand # tells what kind of file this is
+which somebinary  # tells where a program lives
+
+Working with Files and Directories
+To display the content of a text file called a_file:
+
+cat a_file
+To list the contents of a directory, use ls, and you may wish to further use the output. For example, to count the number of files in a directory, use:
+
+ls -l /etc |  wc –l
+# also ls -1 is useful
+
+# Finding files and file content in more detail by using find
+find . -type f -exec grep -H FINDME {} \; 2
+# the –H will print the filename for each “hit”
+
+find /etc -name "*.conf" 1
+# Find files ending in .conf in directory /etc.
+

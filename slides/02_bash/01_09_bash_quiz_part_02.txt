@@ -1,0 +1,32 @@
+Quiz: Bash Commands (2)
+
+1)  Look at your path (the set of directories where programs are found) 
+Hint: the linux stores the PATH in an environment variable PATH you can use an echo command or do env  or printenv 
+EXTRA credit can you use env   and  a pipe to the filter command grep to just look at the PATH env variable?
+ 
+
+2) Go on the mks web page and lookup true and :  and ? On ksh or bash , explain the following script 
+  and also in the page https://www.mkssoftware.com/docs/man1/sh.1.asp on ksh 
+   for word expansion - ? is great! See if you can apply what you learned to this script 
+Hint: that first : must be the ONLY character on the FIRST line of the script!!!
+:
+: ${1?’USAGE name age,   missing name’}
+# HINT: https://www.mkssoftware.com/docs/man1/colon.1.asp
+: ${2?’USAGE name age,   missing age’}    ## what does ? do?  This is the reason for this line see mks ksh doc page
+: ${TMP_FOLDER:="/var/tmp"}
+echo $1
+echo $2
+echo $TMP_FOLDER
+
+#^-- save the above to a file and execute it by doing  bash filename-you-saved-it-to, try passing 1 and 2 arguments
+Note: (repeating the hint since it is important) the first line has a single :  in column 1
+Or you can use a shebang syntax on the first line if you prefer, but a single :  works, why ?
+
+If you can not access https://www.mkssoftware.com/docs/man1/colon.1.asp  try this in the shell to figure what is the difference of : and true
+:  ${missing?’need missing’}
+true ${missing?’need missing’}
+
+NOTE: If you want to process multiple actions on one target you can use { } and semicolon to group if you want,
+What we called a “progn” from lisp, very helpful when redirecting output but {} is also used to wrap a variable reference
+
+

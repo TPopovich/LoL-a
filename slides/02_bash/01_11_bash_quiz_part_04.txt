@@ -1,0 +1,28 @@
+Quiz: Bash Commands (4)
+
+1) Explore touch mkdir rm and rm -rf command
+We will create a new “root” folder to experiment so you do not remove anything important.
+
+Change directory to $HOME and we will create some folders
+
+cd    # will cd to your home folder
+mkdir –p  aTmp/a/1/
+mkdir –p  aTmp/b/1/
+mkdir –p  aTmp/b/2/
+
+touch aTmp/a/1/fox.txt
+
+
+What command can you use to find the “real files” under aTmp , look at MKS toolkit commands for some command to use.
+On Unix or Linux you can also do man –k search  to look for search commands.
+Look at man page or info page or MKS web page find how to print all “folders/directories” only under aTmp.
+Look at how to print only “files” under aTmp
+
+Using pushd  cd to the ‘b/2” folder.
+Using popd   “return back to present folder” did that work?
+
+Try doing rm aTmp did that work?
+
+Try doing rm –rf aTmp  but first review the man page or info page or MKS tool page on rm command
+
+

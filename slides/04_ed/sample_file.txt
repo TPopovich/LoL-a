@@ -1,0 +1,3 @@
+[line ]1 zegrep (1)           - search possibly compressed files for a regular expression
+[line ]2 zfgrep (1)           - search possibly compressed files for a regular expression
+[line ]3 zgrep (1)            - search possibly compressed files for a regular expression

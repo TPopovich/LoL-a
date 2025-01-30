@@ -1,0 +1,19 @@
+Quiz: Bash Commands (3)
+
+1) explore stderr  and stdout with ls command
+When you do ls on a missing file it will return an error code that you can view by doing echo $? It also writes to stderr or stdout 
+
+ mkdir -p /tmp/123
+ cd /tmp/123
+ ls fox
+ echo $?
+
+ ## -- next just look at the output of the next THREE ls commands
+  ls fox > /dev/null               #ls(1)
+  ls  fox  2> /dev/null            #ls(2)
+  ls  > /dev/null                  #ls(3)
+
+# in the above 3 “ls commands”,  how come only the first ls(1) gave any output?
+# Hint:  we are playing with stream redirection so be careful how you enter the commands to match our results
+
+

@@ -1,0 +1,25 @@
+Bash: Functions Intro Lab
+Function Definitions
+Functions are an advanced topic, but here is an example build a "Perl" like die function:
+
+(You might have such functions that you can include in a script, think function library,
+sourced by a script - via the "dot" (.) operator or souce function library code.)
+Here find "perl" die() rewrite:
+
+# Print error message and exit with supplied return code
+# USAGE: die ERROR-CODE [MESSAGE]
+die() 
+{
+  error=${1?’USAGE: die ERROR-CODE [MESSAGE]’}
+  shift
+  [ -n "$*" ] && printf "%s\n" "$*" >&2
+  exit "$error"
+}    # to figure out –n see https://www.mkssoftware.com/docs/man1/test.1.asp
+
+Positional Parameters
+When we call a command script pass it some arguments, these arguments are numbered
+and passed to a shell program; these are called numbered parameters.
+The first argument is $1, the second $2, and so on.
+NOTE: The first positional parameter is not $0; this is the name of the shell or the shell script/command we are calling.
+
+Above we use $1 in the script to pull arg #1 into a LOCAL variable.  We use shift to kick off the first argument and move remaining args over to left

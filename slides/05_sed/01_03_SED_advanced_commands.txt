@@ -1,0 +1,28 @@
+Advanced Sed Commands
+
+The hold Space – save area from the Pattern Space/Buffer of current "line"
+The sed command takes input line-by-line and processes it.  Sometimes we need to “save” or accumulate data into a "hold-ing" area.  VIM has registers that you can "hold" data and this is the same concept.
+…commands reviewed up to this point work with the Pattern space, a buffer that initially holds the line of input that sed just read. The Hold space can hold data while you manipulate data in the Pattern space; it is a temporary buffer. Until you place data in the Hold space, it is empty.
+
+ g (remember this as "get" ... from the hold)
+Copies the contents of the Hold space to the Pattern space over-writing it.
+
+ G
+APPENDS the contents of the Hold space to the Pattern space – DOES NOT over-write it.
+
+ h (remember this as "hold")
+Copies the contents of the Pattern space to the Hold space. The original content of the Hold space is lost! (over-writing it).
+
+ H
+APPENDS the contents of the Pattern space to the Hold space – DOES NOT over-write it.
+
+ x  (think toggle)
+Toggle or Exchanges the contents of the Pattern space and the Hold space.
+
+ 2 Targets,  e.g. thing something like '5,7d'
+If two comma-separated addresses are specified, the command is performed on the first line matching the first address and all succeeding lines up to and including a line matching the second address.
+
+ Not - inverses the Target
+When an address is followed by (!), an exclamation mark, it means logical not (inverse). The command is applied to all lines that do not match the address.
+Example of Invoking SED on Bash Command line,  sed 'program' file  -vs-  sed –n 'program' file
+Unless you instruct it not to, sed sends all lines—selected or not—to standard output. When you use the –n option on the command line, sed sends only certain lines, such as those selected by a Print (p) instruction, to standard output.
