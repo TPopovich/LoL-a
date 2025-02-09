@@ -1,0 +1,4 @@
+
+" Place this at end of YOUR .vimrc or on windows _vimrc file
+" This will map F12 to do "go to next buffer"
+noremap <F12> :bnext<CR>
