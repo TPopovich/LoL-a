@@ -1,0 +1,6 @@
+alias d='dirs -v '
+alias p='pushd'
+alias lth-="ls -rlt| tail "
+alias po=popd
+alias v=vim
+
