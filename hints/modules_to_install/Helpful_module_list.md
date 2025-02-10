@@ -9,4 +9,6 @@ sudo apt install cscope
 sudo apt install zsh
 sudo apt install ripgrep
 sudo apt install fd-find
+sudo apt install vim
+sudo apt install emacs
 ```
