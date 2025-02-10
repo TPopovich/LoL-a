@@ -1,0 +1,16 @@
+# This is an example of data, we have it sorted but want the output
+# generated with desired order of emit:
+# ZZZ lines (in order given in this file)
+# AAA lines (in order given in this file)
+# CCC lines (in order given in this file)
+# As you can seen someone has "sorted" the file, we dont want it
+# sorted by in order Z A C
+#
+# For the exercise you can HARD CODE ZZZ will always be first,
+# AAA will always be second, etc.
+AAA { fc -name jon1.txt ; col -b < jon1.txt }
+AAA { fc -name jon2.txt ; col -b < jon2.txt }
+CCC { fc -name nancy1.txt ; col -b < nancy1.txt }
+CCC { fc -name nancy2.txt ; col -b < nancy2.txt }
+ZZZ { fc -name bret1.txt ; col -b < bret1.txt }
+ZZZ { fc -name bret2.txt ; col -b < bret2.txt }
