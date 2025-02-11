@@ -1,6 +1,10 @@
+# >> purpose:  add some handy alias commands for ksh/bash
+# >> install this by running this command in BASH
+
+cat >> ~/.bashrc  <<EOF
 alias d='dirs -v '
 alias p='pushd'
 alias lth-="ls -rlt| tail "
 alias po=popd
 alias v=vim
-
+EOF
