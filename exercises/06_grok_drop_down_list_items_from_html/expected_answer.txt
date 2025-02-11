@@ -1,0 +1,11 @@
+brazilsouth
+centralindia
+eastasia
+eastus2
+francecentral
+japaneast
+jioindiawest
+northeurope
+southindia
+uaenorth
+uksouth
