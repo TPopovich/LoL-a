@@ -1,0 +1,31 @@
+Quiz: Bash Commands (5)
+
+1) We did not touch much on functions, but see if you can use
+help or the net to lookup bash functions.
+
+2) Using #1 above what does this set of commands do?
+
+```
+mkdir -p ~/histories/javier
+cat >> ~/histories/javier/stage__ROW1.txt << EOF
+stage_1
+stage_2
+...
+EOF
+
+function stages { cat ~/histories/javier/stage__ROW1.txt; }
+
+# in question below what does this do and why might we want it
+cat >> ~/.bashrc  <<EOF
+
+function stages { cat ~/histories/javier/stage__ROW1.txt; }
+
+EOF
+
+```
+
+3) In the above example commands we did a cat >> to bashrc
+why might we do that, try it what happens?
+Think of coming in the next day and launching a new bash what might
+happen?
+
