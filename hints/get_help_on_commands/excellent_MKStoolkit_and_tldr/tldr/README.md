@@ -23,7 +23,7 @@ cd ~ ; mkdir hints
 
 mv tldr_pages.tar.gz hints
 
-tar xzf tld_pages.tar.gz
+tar xzf tldr_pages.tar.gz
 ^------------- to help do this on unix you can just run command make as we have a makefile to extract
 
 ```
