@@ -1,4 +1,4 @@
-Please first do exercise `..\07_build_a_function_to_print_columns_of_text`
+Please first do exercise `../07_build_a_function_to_print_columns_of_text`
 as that is the basis of this exerise.
 
 The goal is to:
