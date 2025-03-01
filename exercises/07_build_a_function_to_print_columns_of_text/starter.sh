@@ -17,6 +17,8 @@ function fetch_data {
   # ??? what goes here, the file task.md  has the contents.
   # BUT we like to be safe, should we add "local" as we did above to shield our local variables?
   # if so, add that also.
+  # ??? What does "local" do?  Search the net to find out or experiment with functions that
+  # have local and ones that do not use it to find out.  It is not required but good defensive programming.
 }
 
 #
