@@ -14,7 +14,9 @@ function getfield {
 } 
 
 function fetch_data {
-  # ??? what goes here
+  # ??? what goes here, the file task.md  has the contents.
+  # BUT we like to be safe, should we add "local" as we did above to shield our local variables?
+  # if so, add that also.
 }
 
 #
