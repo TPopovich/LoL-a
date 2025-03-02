@@ -1,0 +1,65 @@
+Form 1098 Mortgage Interest Statement
+Recipient/Lender:
+Recipient's Federal Identification Number (FIN):XXXXX2688
+FIRST NAT
+232 Madison Ave
+Payer/Borrower:
+Payer's Social Security Number:XXX-XX-7022
+SMITH, JOE
+101 MAIN ST
+Submission Type:	Original	document
+Account Number (Optional) :..........................................
+.XXXXXX9595
+Mortgage Interest Received from Payer (s)/Borrower (s) :...................$3,149.00
+Points Paid on Purchase of Principal
+Residence:..................................$0.00
+Refund of Overpaid Interest:.................................................
+$0.00
+Mortgage Insurance
+Premiums:...................................................  $0.00
+Outstanding Mortgage
+Principle:..........................................$123,460.00
+Mortgage Origination
+Date:..................................................09-07-2018
+Property Address Verification:
+........................................................
+Address of property securing Mortgage :......................................
+101 Main St.
+Description of Property:
+..............................................................
+Other information from
+recipient:.......................................................
+The number of mortgaged
+properties:...........................................00000000
+Mortgage Acquisition Date:.................................................
+00-00-0000
+Form 1098 Mortgage Interest Statement
+Recipient/Lender:
+Recipient's Federal Identification Number (FIN):XXXXX9488
+NAVY FEDERAL
+2100 ROUTE 38 CHERRY HILL
+Payer/Borrower:
+Payer's Social Security Number:XXX-XX-7022
+SMITH, JOE
+101 MAIN ST
+Submission Type:........................................        .
+.Original	document
+Account Number
+(Optional):................................................XXXXXX7964
+Mortgage Interest Received from	Payer(s)/Borrower(s):.
+....................$10,132.00
+Points Paid on Purchase of Principal	Residence:...........................
+$0.00
+Refund of Overpaid
+Interest:.......................................................................................$0.00
+Mortgage Insurance Premiums:..................................................
+$0.00
+Outstanding Mortgage
+Principle:...........................................$200,000.00
+Mortgage Origination
+Date:.................................................10-13-2017
+Property Address Verification:
+the address of the property securing the mortgage is the same as the
+payer's/borrower's
+Address of property securing Mortgage:....................................
+
