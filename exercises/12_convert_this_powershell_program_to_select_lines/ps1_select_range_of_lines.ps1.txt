@@ -1,0 +1,26 @@
+<# This function will select range of lines in a file, you can try it out in
+   powershell on windows if you want by copy-pasting it into powershell "shell"
+   and trying it out.
+#>
+function Select-Lines {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$FilePath,
+
+        [Parameter(Mandatory = $true)]
+        [int]$StartLine,
+
+        [Parameter(Mandatory = $true)]
+        [int]$EndLine
+    )
+
+    # Ensure EndLine is greater than StartLine
+    if ($EndLine -lt $StartLine) {
+        Write-Error "EndLine must be greater than or equal to StartLine."
+        return
+    }
+
+    # Read the file and select the range of lines
+    Get-Content -Path $FilePath | Select-Object -Skip ($StartLine - 1) -First ($EndLine - $StartLine + 1)
+}
+
