@@ -23,3 +23,12 @@ function Generate-SasEndpoint {
 }
 
 ```
+
+
+See file  `azure_regions.txt`
+that has a list of valid azure regions.  Try to make that into a real CSV like database that you
+can use cut or awk to process fields to see if you can:
+```
+1. validate regions
+2. maybe help users find values to use with the code generator
+```
