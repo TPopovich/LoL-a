@@ -1,3 +1,28 @@
+The goal here is not fully replicate what other languages can do with a DBM file.
+Awk can even load a shared lib (dll) on unix/linux and call c level functions.
+But that is hard and would not match what Perl and Python can do with DBM
+files as they blend it into language native features.
+
+Here we are trying to "save/restore" values saying in a program.  E.g. I want
+a program that remembers which jpeg file, we have several fake jpeg files
+in the folder was last entered in a prompt. If the user enters Return and no
+text we echo back user selected xxx.jpeg (same as last time) otherwise
+we take their input and "save" it for the next time the program runs.
+
+```
+# flow expected
+
+$ ask_jpeg.sh
+Enter the jpeg file:  aaa.jpeg
+::output::user entered: aaa.jpeg
+$ ask_jpeg.sh
+Enter the jpeg file (default aaa.jpeg):
+::output::user entered: aaa.jpeg
+$
+```
+
+Background on DBM
+
 Unix invented a DBM (key/value) simple mans database stored in a disk file,
 actually at ATT and then BSD enhanced/extended it to use larger pointers supporting
 very large numbers of records. Linux uses the BSD implemetation (called nDBM - aka 
