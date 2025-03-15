@@ -1,0 +1,67 @@
+Unix invented a DBM (key/value) simple mans database stored in a disk file,
+actually at ATT and then BSD enhanced/extended it to use larger pointers supporting
+very large numbers of records. Linux uses the BSD implemetation (called nDBM - aka 
+new DBM since disk devices grew larger from what was originally used in unix around 1970).
+
+DBM is a c library.  One of the first tools to make it easily used was Perl.  Early perl
+I believe near perl v3 had dbmopen (as it is bound to a "dbm" file) and is easier to
+understand.
+
+Later Perl v5 made the idea more abstract to `tie` a perl Hash/Dict/Associative Array
+to a `disk DB` file.  Perl Tie can tie other things to a hash as it is an abstract
+concept.
+
+Accessing a database as a hash is powerful and easy way to give you a persistent Hash/Associative array,
+
+Below `0666` gives the permsisions to create the file if it does not exist already.
+
+Here is Perl, in both forms dbmopen and via tie:
+
+```
+use DB_File;        # optional; overrides default
+dbmopen %HASH, $FILENAME, 0666      # open database, accessed through %HASH
+    or die "Can't open $FILENAME:$!\n";
+
+$V = $HASH{$KEY};               # retrieve value from database
+$HASH{$KEY} = $VALUE;           # put value into database
+if (exists $HASH{$KEY}) {       # check whether value is in database
+    # ...
+}
+
+delete $HASH{$KEY};             # remove from database
+dbmclose %HASH;                 # close the database
+```
+
+Using the newer way via perl v5 tie method
+
+```
+tie
+use DB_File;        # load database module
+
+tie %HASH, "DB_File", $FILENAME     # open database, to be accessed
+    or die "Can't open $FILENAME:$!\n";    # through %HASH
+
+$V = $HASH{$KEY};               # retrieve value from database
+$HASH{$KEY} = $VALUE;           # put value into database
+if (exists $HASH{$KEY}) {       # check whether value is in database
+    # ...
+}
+
+delete $HASH{$KEY};             # delete from database
+untie %HASH;                    # close the database
+```
+
+If you try that in perl you will see we have persistent Associative array
+that we can use.
+
+This example is to try to build something similar in linux using bash and awk.
+
+
+Python also added `DBM` access copying `perl`.  Note that in Python which tries
+to cache values, it sometimes can be tricky to `flush` records.  The net has
+examples how to "flush" values that were changed in a reliable way.
+
+Perl makes it easier to flush changed values in a reliable way so we presented
+only perl to make it easier to follow along as it is more reliable (albeit 
+Perl having a reputation to be harder to understand/read).
+
