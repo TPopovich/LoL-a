@@ -9,6 +9,13 @@ in the folder was last entered in a prompt. If the user enters Return and no
 text we echo back user selected xxx.jpeg (same as last time) otherwise
 we take their input and "save" it for the next time the program runs.
 
+Using a DBM feature makes this trivial as it remembers for us.  But we will
+simulate it as best we can.  
+
+What if we had to remember 5 distinct values?  DMB does near infinite numbers
+but w/o that it is more challenging... How do you remember 5?   Remembering just
+one as the exercise asks is easier and more than one more challenging....
+
 ```
 # flow expected
 
