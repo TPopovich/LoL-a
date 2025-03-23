@@ -69,9 +69,9 @@ by a file.  `You can also do  cd .  and try that out... It goes nowhere as the c
 directory is effectively a nop - no operation.
 
 10) Type: `man ls | col -b | tee man.ls.txt`
-    </br>Here we have used two (2) pipe symbols, this displayed the cleaned-up man page for ls
-by filtering out non-printable characters and then used the "tee" command to direct the
-output to two (2) places `stdout` AND also to a text file (here man.ls.txt).
+    </br>Here we have used two (2) pipe symbols, this displayed using "tee" the cleaned-up man page for ls
+by filtering out non-printable characters and then used the "tee" command again to direct the
+output to two (2) places `stdout` AND also to a text file (here man.ls.txt).  Tee sends the `input` that it gets to `two` places.
 11) Type: less man.ls.txt
     </br>NOTE: if less does says no command available, you do not have less so use instead `more` - but less is more (a play on less is a better more than more) so use that
 if it is available.
