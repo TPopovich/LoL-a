@@ -37,15 +37,15 @@ such as ksh, bash, zsh  or any other that uses `PS1` it too with use Type: as th
 Once you have set your prompt and in a shell for the first time, you are in your home directory.
 Begin typing the following:
 1) Type: pwd
-Q: what was displayed? (pwd - means print working directory)
+</br>Q: what was displayed? (pwd - means print working directory)
 2) Type: cd .. ; pwd
-now you will likely see /home on most Unix/Linux
+   </br>now you will likely see /home on most Unix/Linux
 3) Type: cd ; ls
-Q: what do you see? Now you should see what was displayed in step 1. Unix/Linux makes it easy to find your way home - default target of cd.
+   </br>Q: what do you see? Now you should see what was displayed in step 1. Unix/Linux makes it easy to find your way home - default target of cd.
 4) Type: man pwd
-`(to exit press "q")` This is the help page (or manual page - aka man page as Unix/Linux calls it) for pwd, and gives help/documention for a command.
+   </br>`(to exit press "q")` This is the help page (or manual page - aka man page as Unix/Linux calls it) for pwd, and gives help/documention for a command.
 5) Type: man pwd | col -b
-The output should different. `col -b` is a good trick to clean up fancy looking output.  Unix/Linux is designed
+   </br>The output should different. `col -b` is a good trick to clean up fancy looking output.  Unix/Linux is designed
 to give bold text and colors (see that original `$PS1` above with those wierd characters....) and when you need to view
 it or save to a file this our go-to wayh to filter out or remove non-printable characters. This is our first use of the pipe
 symbol "|" to string text from one program to another.  Under the hood in the OS, this is our first inter-process communication tool
@@ -57,7 +57,7 @@ aspect of Unix/Linux where we string small specialized tools together repeatedly
 7) Type: ls
 8) Type: ls -al
 9) Type: ls -Al ;  ls
-Linux is case sensitive.  The `-a` and `-A` did something different.  In practice we will never use `-A` usually
+   </br>Linux is case sensitive.  The `-a` and `-A` did something different.  In practice we will never use `-A` usually
 this is just to show that you need to be careful with entering options as case matters.  (NOTE: this is generally not
 true on DOS/Windows so users familar with that OS need to remember that case matters.)
 
@@ -69,11 +69,11 @@ by a file.  `You can also do  cd .  and try that out... It goes nowhere as the c
 directory is effectively a nop - no operation.
 
 10) Type: `man ls | col -b | tee man.ls.txt`
-Here we have used two (2) pipe symbols, this displayed the cleaned-up man page for ls
+    </br>Here we have used two (2) pipe symbols, this displayed the cleaned-up man page for ls
 by filtering out non-printable characters and then used the "tee" command to direct the
 output to two (2) places `stdout` AND also to a text file (here man.ls.txt).
 11) Type: less man.ls.txt
-NOTE: if less does says no command available, you do not have less so use instead `more` - but less is more (a play on less is a better more than more) so use that
+    </br>NOTE: if less does says no command available, you do not have less so use instead `more` - but less is more (a play on less is a better more than more) so use that
 if it is available.
 NOTE: to quit less or more, `type q`, to move down, use the space bar or cursor keys or keyboard return (by line),
 use b to go back up one page.
@@ -82,12 +82,12 @@ while for `more` the default is what Unix/Linux historically used as the default
 If you enter the "v" command you will enter the nano or vi editor - wait on doing that as you dont know how to exit the editor.
 
 12) Type: ls -alt
-now you will time sorted file lists, the ones you created last at the top, the -t option is time sort
+    </br>now you will time sorted file lists, the ones you created last at the top, the -t option is time sort
 and you can also add an r for `ls -altr` to reverse the sort order.
 
-13) WOW; we have covered the five most essential Linux commands: man, ls, cd, pwd and more/less to page long files.
+13) echo "WOW"; </br> we have covered the five most essential Linux commands: man, ls, cd, pwd and more/less to page long files.
 14) Type: cd /lib ; ls -FCR | less
-TIP: use more if less is not available.
+    </br>TIP: use more if less is not available.
 You changed directory to /ls, then added another command (ls pipe more), separated by the
 semi-colon to stick a sequential set of commands on one line. The semi-colon tells the shell to do the first command
 namely the `cd` and when that is fully finished move to the next command `here ls pipe more` next.
