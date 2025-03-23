@@ -10,3 +10,5 @@ See:
 [part a of this recipe](./003a_permission_on_a_script_to_execute.md)
 
 [part b of this recipe](./003b_permission_on_a_script_to_execute.md)
+
+[part c of recipe - Permissions](./003c_permission_paths.md)
