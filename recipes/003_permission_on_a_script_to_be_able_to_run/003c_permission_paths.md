@@ -9,6 +9,8 @@ For Unix/Linux the commands you can run are found in the $PATH variable.
 We had to make our script executable via the `chmod` command. And to find it via `which`
 we needed to add `.` to the `$PATH` variable....
 
+If you have not done it see [part b of this recipe](./003b_permission_on_a_script_to_execute.md)
+
 ## Investigating further
 
 Before we added "." to the path, `which` could not find our program. Here is a replay of
