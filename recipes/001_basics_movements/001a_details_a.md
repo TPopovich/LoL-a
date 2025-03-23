@@ -16,7 +16,7 @@ oo allow redirecting the stdout from one process to the stdin of another allowin
 in files.  This is a key concept of Unix/Linux and exposed by the shell we are working in.
 
 TIP:  below when you open your `bash` or `zsh` or `ksh` shell, you can change the prompt so it will say "type:" to follow
-along in the receipe.  This is not required but will make the receipe look like the screen on the computer.
+along in the recipe.  This is not required but will make the recipe look like the screen on the computer.
 `To change the prompt do this`:
 
 ```
