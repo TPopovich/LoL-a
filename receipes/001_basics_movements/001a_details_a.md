@@ -86,7 +86,7 @@ If you enter the "v" command you will enter the nano or vi editor - wait on doin
     </br>now you will see `time sorted` file lists, the ones you created last will be presented at the top, the `-t` option is an instruction to time sort
 and you can also add an r for `ls -altr` to reverse the sort order.
 
-13) echo "WOW"; </br> we have covered the five most essential Linux commands: man, ls, cd, pwd and more/less to page long files.
+13) echo "WOW"; </br> we have covered the six most essential Linux commands: `man, ls, cd, pwd, echo and more/less` to page long files.
 14) Type: cd /lib ; ls -FCR | less
     </br>TIP: use more if less is not available.
 You changed directory to /ls, then added another command (ls pipe more), separated by the
@@ -101,4 +101,4 @@ down using commands like the space bar and B. No mouse was needed and we can jus
 16) Type: man ls | col -b > man.ls.txt
 17) Type: ls man.*.txt
 
-Success you have just toured Unix/Linux and used live the basic essential commands you will use everywhere.
+Great Work!  You have just toured Unix/Linux and used live the basic essential commands you will use everywhere.
