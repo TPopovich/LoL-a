@@ -47,7 +47,7 @@ Begin typing the following commands shown after the `Type:` below so your screen
 5) Type: man pwd | col -b
    </br>The output should different. `col -b` is a good trick to clean up fancy looking output.  Unix/Linux is designed
 to give bold text and colors (see that original `$PS1` above with those wierd characters....) and when you need to view
-it or save to a file this our go-to wayh to filter out or remove non-printable characters. This is our first use of the pipe
+it or save to a file this our go-to way to filter out or remove non-printable characters. This is our first use of the pipe
 symbol "|" to string text from one program to another.  Under the hood in the OS, this is our first inter-process communication tool
 that we used.  This IPC (by PIPE) that directs stdout to stdin of two processes (the 2 programs man and col) thereby
 allowing multiple processes to be executed at one time. This allows data to be filtered.  This is a key
