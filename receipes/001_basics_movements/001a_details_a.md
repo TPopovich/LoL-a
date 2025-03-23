@@ -35,7 +35,7 @@ such as ksh, bash, zsh  or any other that uses `PS1` it too with use Type: as th
 
 
 Once you have set your prompt and in a shell for the first time, you are in your home directory.
-Begin typing the following:
+Begin typing the following commands shown after the `Type:` below so your screen looks just like the lines starting with Type::
 1) Type: pwd
 </br>Q: what was displayed? (pwd - means print working directory)
 2) Type: cd .. ; pwd
