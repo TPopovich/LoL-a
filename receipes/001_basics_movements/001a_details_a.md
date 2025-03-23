@@ -43,7 +43,7 @@ Begin typing the following commands shown after the `Type:` below so your screen
 3) Type: cd ; ls
    </br>Q: what do you see? Now you should see what was displayed in step 1. Unix/Linux makes it easy to find your way home - default target of cd.
 4) Type: man pwd
-   </br>`(to exit press "q")` This is the help page (or manual page - aka man page as Unix/Linux calls it) for pwd, and gives help/documention for a command.
+   </br>`(to exit press "q")` This is the help page (or manual page - aka man page as Unix/Linux calls it) for pwd, and gives help/documention for a command. We will see other manual commands that are better than `man` but `man` was the original Unix documentation command.
 5) Type: man pwd | col -b
    </br>The output should different. `col -b` is a good trick to clean up fancy looking output.  Unix/Linux is designed
 to give bold text and colors (see that original `$PS1` above with those wierd characters....) and when you need to view
