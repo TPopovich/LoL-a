@@ -1,4 +1,4 @@
-Receipe #1 - basic commands
+# Receipe #1 - basic commands
 
 When doing this exercise and other exercises keep in mind that Unix/Linux consists
 basically of two things:
