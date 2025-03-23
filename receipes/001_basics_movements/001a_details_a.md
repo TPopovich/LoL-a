@@ -82,7 +82,7 @@ while for `more` the default is what Unix/Linux historically used as the default
 If you enter the "v" command you will enter the nano or vi editor - wait on doing that as you dont know how to exit the editor. `But we recommend that you dont do this yet. And if you do you have to exit the editor, to do so... do a web search on how to exit the editor, if in vi/vim you do escape :q! and in nano it shows at the bottom of the screen a hint to exit`
 
 12) Type: ls -alt
-    </br>now you will time sorted file lists, the ones you created last at the top, the -t option is time sort
+    </br>now you will see `time sorted` file lists, the ones you created last will be presented at the top, the `-t` option is an instruction to time sort
 and you can also add an r for `ls -altr` to reverse the sort order.
 
 13) echo "WOW"; </br> we have covered the five most essential Linux commands: man, ls, cd, pwd and more/less to page long files.
