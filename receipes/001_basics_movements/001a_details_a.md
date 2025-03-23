@@ -61,12 +61,13 @@ aspect of Unix/Linux where we string small specialized tools together repeatedly
 this is just to show that you need to be careful with entering options as case matters.  (NOTE: this is generally not
 true on DOS/Windows so users familar with that OS need to remember that case matters.)
 
-note the differences in the file listing (ls) command output.
+Note the differences in the file listing (`ls`) command output.
 The `ls -al` command showed two lines with a dot, and then two dots.
-What are they? The single dot represents the current directory.
+What are the dots? The single dot represents the current directory.
 And the two dots represent the parent directory. Remember, everything is represented
-by a file.  `You can also do  cd .  and try that out... It goes nowhere as the cd to current
-directory is effectively a nop - no operation.
+by a file.  You can also do  `cd .`  and try that out... It goes nowhere as the cd to current
+directory is effectively a nop - no operation.  (NOTE:  the `.` and `..` are also present on DOS/Windows
+as well but generally used less than on Unix/Linux.)
 
 10) Type: `man ls | col -b | tee man.ls.txt`
     </br>Here we have used two (2) pipe symbols, this displayed using "tee" the cleaned-up man page for ls
