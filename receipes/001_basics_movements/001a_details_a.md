@@ -27,7 +27,7 @@ tpop@asrock3:~$ export PS1="Type: "
 Type: 
 ```
 
-Notice how we show the current `PS1` variable from our system and then after we set `PS1` it changes the prompt to just `type:`.
+Notice how we show the current `PS1` variable from our system and then after we set `PS1` it changes the prompt (from `tpop@asrock3:~$`) to just `type:`.
 
 Ignore all thos wierd characters in the original PS1 for now.  Also we have not changed anything permanently. When you create a new
 shell from scratch it will still have the original PS1.   But since we did an export of PS1 if you did another `sh` derived shell
