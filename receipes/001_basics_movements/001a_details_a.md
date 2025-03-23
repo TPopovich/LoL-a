@@ -79,7 +79,7 @@ NOTE: to quit less or more, `type q`, to move down, use the space bar or cursor 
 use b to go back up one page.
 POWER HINT: do not do this yet, ... but if you were to type "v" in less you would enter your `default editor` and on ubuntu that is nano
 while for `more` the default is what Unix/Linux historically used as the default editor, namely vi.
-If you enter the "v" command you will enter the nano or vi editor - wait on doing that as you dont know how to exit the editor. `But dont do this yet of if you do then do a web search on how to exit the editor, if in vi/vim you do escape :q! and in nano it shows at the bottom of the screen a hint to exit`
+If you enter the "v" command you will enter the nano or vi editor - wait on doing that as you dont know how to exit the editor. `But we recommend that you dont do this yet. And if you do you have to exit the editor, to do so... do a web search on how to exit the editor, if in vi/vim you do escape :q! and in nano it shows at the bottom of the screen a hint to exit`
 
 12) Type: ls -alt
     </br>now you will time sorted file lists, the ones you created last at the top, the -t option is time sort
