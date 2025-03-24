@@ -22,7 +22,7 @@ then
   alias rm="rm -i"    # -i prevents overwriting files, use full path (/usr/bin/rm) to override
 fi
 
-# Most Unix/Linux tools will use vi/vim if not default is selected, here you can
+# Most Unix/Linux tools will use vi/vim if no default env variable is provided. Here you can
 # change EDITOR and VISUAL to another if you like.  We set to vi (or vim if installed).
 # Visual tools on Unix historically have used either EDITOR or VISUAL so we set both.
 EDITOR=vi; export EDITOR
