@@ -3,16 +3,19 @@
 We added some alias to commands that might be dangerous.  To make safer we add `-i` to
 prompt for overwrite of files.
 
-You can select to be defensive or not.
+You can select to be defensive or not, by changing `DO_DEFENSIVE_CHECK_OVERWRITE` below.
+
+If you copy and paste this into a shell it will append to your existing `~/.bashrc` file or
+create one if it did not exist.
 
 ```
 cat >> ~/.bashrc <<'EOF'
 # we added this as sample .bashrc
 
+# Do you want every mv/cp/rm command to warn you if we are going to clobber an existing file 
 DO_DEFENSIVE_CHECK_OVERWRITE=true  # set to true or false
 
-
-if DO_DEFENSIVE_CHECK_OVERWRITE
+if $DO_DEFENSIVE_CHECK_OVERWRITE
 then
   alias mv="mv -i"    # -i prevents overwriting files, use full path (/usr/bin/mv) to override
   alias cp="cp -i"    # -i prevents overwriting files, use full path (/usr/bin/cp) to override
@@ -49,7 +52,7 @@ alias d='dirs -v '
 alias p='pushd'
 alias lth-="ls -rlt| tail "
 alias po=popd
-alias v=vim
+alias v=vim  # set to vi if vim does not exist
 
 EOF
 ```
