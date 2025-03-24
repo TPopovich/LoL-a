@@ -29,6 +29,21 @@ then
 fi
 VISUAL=$EDITOR; export VISUAL
 
+umask 022
+# note: people usually use umask 022 sets new files: 644 & dirs: 755 in octal   
+#======================================================================================
+#  HISTORY:   (suggest replacing the tilda (~) with the full path!)
+# note:  The following tests for our histories directory, if not there, then create...
+if [ ! -d ~/histories ]; then                 
+  mkdir  ~/histories 
+  echo "~/history directory made to store shell histories"
+fi
+ 
+#======================================================================================
+# Note: this creates a history file for each instance e.g.: ending ...2025_03_Mar_23_19.16.history.txt
+#======================================================================================
+HISTFILE="~/histories/`date '+%Y_%m_%b_%d_%H.%M'.history.txt`" ; export HISTFILE
+HISTSIZE=2048; export HISTSIZE  # default is low usually 1024, we want double that or more!
 
 alias d='dirs -v '
 alias p='pushd'
