@@ -95,7 +95,8 @@ cat > create18man.sh <<'EOF'
 ### ^- above is the very first line of script (called a shebang) v-- next line is the program comment
 # create18man.sh - automation script with for loop to save man pages for various Linux commands
 
-export CMD_NAME="cat cut fmt head od nl paste sed sort tail tr uniq wc cp find mkdir mv dd"
+CMD_NAME="cat cut fmt head od nl paste sed sort tail tr uniq wc cp find mkdir mv dd"
+#  note we do not have to use export CMD_NAME= here as we only use CMD_NAME var in this file
 
 for i in $CMD_NAME
 do

@@ -29,7 +29,9 @@ Type:
 
 Notice how we show the current `PS1` variable from our system and then after we set `PS1` it changes the prompt (from `johny@asrock3:~$`) to just `type:`.
 
-Ignore all thos wierd characters in the original PS1 for now.  Also we have not changed anything permanently. When you create a new
+Ignore all those wierd characters like `\033...` in the original PS1 for now, those are there to do color changes for making the Linux prompt pretty.
+Also, we have not changed anything permanently if you just do a setting of `PS1=...` without an export and even if you do `export PS1=...` it only effects the current shell and any subshells spawned from this shell.
+When you create a new
 shell from scratch it will still have the original PS1.   But since we did an export of PS1 if you did another `sh` derived shell
 such as ksh, bash, zsh  or any other that uses `PS1` it too with use Type: as the prompt.
 
