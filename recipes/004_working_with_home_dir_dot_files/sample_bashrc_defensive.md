@@ -45,7 +45,7 @@ umask 022
 # note:  The following tests for our histories directory, if not there, then create...
 if [ ! -d ~/histories ]; then                 
   mkdir  ~/histories 
-  echo "~/history directory made to store shell histories"
+  echo "~/histories directory made to store shell histories"
 fi
  
 #======================================================================================
