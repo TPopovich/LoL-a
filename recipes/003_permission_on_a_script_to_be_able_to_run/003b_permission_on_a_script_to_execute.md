@@ -50,7 +50,7 @@ type: ls -l /usr/bin/bash
 type:
         ^---- notice there are x characters for bash
 
-type: ls -l cmdTest01
+type: ls -l cmdTest01.sh
 -rw-r--r-- 1 johny johny 25 Mar 23 12:05 cmdTest01.sh
 type:
 

@@ -39,6 +39,14 @@ highly configurable and there are many different places that settings can be twe
 But we have faith that you'll be able to sort out any minor issues...
 
 ### Try this example:
+
+We usually name our file `xxx.sh` as convention.  Unix/Linux does not use the `.sh` in the same way that
+Windows used extensions.  But by using scripts in filenames that end in `.sh` editors like VIM and Emacs
+and VsCode can know it is a `shell script`.
+
+TIP: for shell scripts based on sh (so ksh/bash/zsh) use extension of `.sh`; for any SED pure command file use `.sed`
+and similar for AWK pure snippet use `.awk` ... and VIM will give you syntax highlighting.
+
 ```
 Type: mkdir exercise_3a; cd exercise_3a
 Type: echo "this is a command script"
