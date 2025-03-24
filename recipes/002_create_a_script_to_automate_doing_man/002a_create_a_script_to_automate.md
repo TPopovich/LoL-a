@@ -98,13 +98,14 @@ cat > create18man.sh <<'EOF'
 CMD_NAME="cat cut fmt head od nl paste sed sort tail tr uniq wc cp find mkdir mv dd"
 #  note we do not have to use export CMD_NAME= here as we only use CMD_NAME var in this file
 
+# V-- this {{for i in}} pattern is an ideom to do a foreach loop in the shell, it iterates over a list 
 for i in $CMD_NAME
 do
   echo "processing $i"
   man 1 $i | col -b > man.$i.txt
 done
 
-ls -l   # this just shows files in the current folder
+ls -l   # this just shows files in the current folder created from the for loop
 
 ### LAST line of script
 EOF
