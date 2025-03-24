@@ -40,7 +40,7 @@ But we have faith that you'll be able to sort out any minor issues...
 
 ### Try this example:
 ```
-Type: mkdir LAB; cd LAB
+Type: mkdir exercise_3a; cd exercise_3a
 Type: echo "this is a command script"
 you should see: this is a command script
 
@@ -119,3 +119,11 @@ exit
 Script done.
 ```
 
+Our suggestion is to then do this to "clean up file typescript":
+
+```
+Type: cat typescript | col -b > typescript.txt
+```
+
+That will remove non-printable characters and "remove and fix" backspace and other editing
+keystrokes in an intelligent manner and leave file `typescript.txt` good looking.
