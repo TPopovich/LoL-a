@@ -12,7 +12,9 @@ create one if it did not exist.
 cat >> ~/.bashrc <<'EOF'
 # we added this as sample .bashrc
 
+#======================================================================================
 # Do you want every mv/cp/rm command to warn you if we are going to clobber an existing file 
+#======================================================================================
 DO_DEFENSIVE_CHECK_OVERWRITE=true  # set to true or false
 
 if $DO_DEFENSIVE_CHECK_OVERWRITE
@@ -22,9 +24,11 @@ then
   alias rm="rm -i"    # -i prevents overwriting files, use full path (/usr/bin/rm) to override
 fi
 
+#======================================================================================
 # Most Unix/Linux tools will use vi/vim if no default env variable is provided. Here you can
 # change EDITOR and VISUAL to another if you like.  We set to vi (or vim if installed).
 # Visual tools on Unix historically have used either EDITOR or VISUAL so we set both.
+#======================================================================================
 EDITOR=vi; export EDITOR
 if which vim > /dev/null 2>&1
 then
@@ -33,9 +37,11 @@ fi
 VISUAL=$EDITOR; export VISUAL
 
 umask 022
-# note: people usually use umask 022 sets new files: 644 & dirs: 755 in octal   
+# note: people usually use umask 022 sets new files: 644 & dirs: 755 in octal
+   
 #======================================================================================
-#  HISTORY:   (suggest replacing the tilda (~) with the full path!)
+#  HISTORY:   (suggest replacing the tilda (~) with the full path if you use a shell where ~ is not set)
+#======================================================================================
 # note:  The following tests for our histories directory, if not there, then create...
 if [ ! -d ~/histories ]; then                 
   mkdir  ~/histories 
