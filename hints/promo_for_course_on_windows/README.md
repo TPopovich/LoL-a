@@ -4,8 +4,10 @@ Some system admin skill is useful on both `windows` and `linux`.
 
 We show some good tools on windows:
 
+
 ### robocopy
 
+The next case study  uses 
 Robocopy was a tool built by people outside of microsoft.  Microsoft found
 it useful and originally included it on the `NT Resource Kit` but it is
 so useful that it now ships with all recent versions of windows.
@@ -17,78 +19,6 @@ question marks) to get even more help than `/?` when available.
 
 #### case study use robocopy to cache-files-and-folders
 
-#### Situation
-
-Situation: An engineer built a test system and was using a system provided
-shared drive `known as P:` to save test `artifacts` to make sure the test
-results is saved if the system under test crashed.
-
-#### Problem
-
-Then recent changes in the network, made networking unreliable!  So that
-now the `P:` drive would disconnect and reconnect at random!
-
-When the P: drive is not present the tests crash and stop.
-
-#### Proposed solution
-
-I proposed we use `robocopy` to "mirror-cache" the changes, that will
-give `eventual consistency` on the safe `P:` drive.
-
-Here is the proposed solution:
-- we create a local folder to hold test artifacts, below "mount" / "p",
-- we modify the test code to use "K" drive vs the "P" drive, this was really easy as the test engineer just does a replace all "P:" to "K:" (k for cache)
-- we setup a windows subst k: drive that points to the c: folder created in step 1, now windows thinks of it as a drive,
-- we run robocopy to copy (and keep checking for things to copy) the test artifacts every 2 minutes to the p: master storage location to make sure we backup all test artifacts.
-
-
-```
-# On windows powershell do this, just copy and paste the non comments into a powershell terminal window
-
-$path = "C:\mnt\p";
-$drive = "K:";
-
-if (!(Test-Path $path)) {
-    New-Item -ItemType Directory -Path "$path" ;
-}
-
-subst $drive $path
-
-<# Explain the code:
-# Above code will create local cache directory if it does not exist, create it
-# then "Map" drive using subst
-# Details: In powershell write command line code to create a directory '''c:\mnt\p'''
-# if it does not exist already. THEN we create via 
-# subst the '''k:''' drive pointing to it
-# ------------------------------------------------
-# $path:              folder that will be a "cache" of the p: drive
-# $drive (here "K:")  new drive letter "alias" to pretent drive "K" is the new "P" drive
-# ------------------------------------------------
-#>
-
-
-```
-
-After that we run this command to start the eventual sync from our "K" disk to the "P" disk
-and update the shared folder with new files every 2 minutes.
-
-```
-# On windows powershell do this, just copy and paste following into a powershell terminal window
-
-robocopy k:\.  p:\.  /E  /MOT:2  /Z
-
-```
-
-Later we can change robocopy to uses is nice logic to wait to run commands when shares are available,
-see its `/TBD :: Wait for sharenames To Be Defined` flag.  That can enable instead of using the `P:`
-share as a `drive` we use the share name and then robocopy will know to run commands only after
-it validates the share is accessible.
-
-
-##### Result
-Instead of having tests crash as the p: drive drops, we run tests and fill up the c: local folder
-and robocopy is running the background sync-ing files every 2 minutes to the shared folder.
-
-
+[HOWTO use robocopy to local cache eventual consistency to shared drive proposal](./HOWTO_use_robocopy_MOT_to_local_cache_eventual_consistency_to_shared_drive_proposed.md)
 
 
