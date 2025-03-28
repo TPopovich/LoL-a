@@ -83,7 +83,7 @@ A good case study on why /TBD is there, microsoft will create a new share for a 
 and people downstream in microsoft tech space, e.g. Dec/Compaq/Hp support windows-NT like OS on
 non intel chips and need to compile the code under agreement... so when a new daily build is available
 a `new share` is created like `daily_build_2025_03_28` and we can kick off a robocopy that will
-copy from the `as yet not created share naame` and it will begin work when the share is available.
+copy from the `as yet not created share name` and it will begin work when the share is available.
 
 See microsoft will take its time to create the share only after tests pass and might be a day or so
 late.
@@ -94,6 +94,7 @@ Robocopy retries failed transfers and will dutifully start when the share is ava
 the fresh copy to work the next work week!
 
 Robocopy has many other flags for a number of practical things that you deal with on windows.
+Its main claim to fame is retrying failed copies ...  and doing various mirror copy jobs.
 
 
 ## Tools
