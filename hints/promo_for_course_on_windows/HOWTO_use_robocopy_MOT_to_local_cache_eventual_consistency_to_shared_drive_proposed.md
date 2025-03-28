@@ -90,6 +90,9 @@ late.
 We at Dec/Compaq/Hp kick off the robocopy on Friday morning and by Monday the code appears even
 if Microsoft is late getting the code built on Friday, etc... 
 
+Robocopy retries failed transfers and will dutifully start when the share is available and we have
+the fresh copy to work the next work week!
+
 Robocopy has many other flags for a number of practical things that you deal with on windows.
 
 
