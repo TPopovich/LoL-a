@@ -71,6 +71,10 @@ and robocopy is running the background sync-ing files every 2 minutes to the sha
 This was a `great` improvement as the test engineer was blocked for a half a week due to network
 problems and it was impacting validations in a key application.
 
+Tests run faster as well.  Instead test code openning and creating files on a share, we write them
+locally and robocopy is running in multithread-ed mode to efficiently copy files across the networks.
+Robocopy can also try to "restart failed network sends" on partial failures.
+
 ### Follow on work also proposed to use network share names rather than p: in robocopy
 
 Later we can change above robocopy command instead of just using p: to use the `share name` which I pitched
