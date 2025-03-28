@@ -62,6 +62,17 @@ robocopy k:\.  p:\.  /E  /MOT:2  /Z
 
 ```
 
+
+
+### Result
+Instead of having tests crash as the p: drive drops, we run tests and fill up the c: local folder
+and robocopy is running the background sync-ing files every 2 minutes to the shared folder.
+
+This was a `great` improvement as the test engineer was blocked for a half a week due to network
+problems and it was impacting validations in a key application.
+
+### Follow on work also proposed to use network share names rather than p: in robocopy
+
 Later we can change above robocopy command instead of just using p: to use the `share name` which I pitched
 to the test engineer; why? Robocopy has nice built in logic to wait to run copy commands to be 
 only done when shares are available!
@@ -74,12 +85,12 @@ non intel chips and need to compile the code under agreement... so when a new da
 a `new share` is created like `daily_build_2025_03_28` and we can kick off a robocopy that will
 copy from the `as yet not created share naame` and it will begin work when the share is available.
 
+See microsoft will take its time to create the share only after tests pass and might be a day or so
+late.
+We at Dec/Compaq/Hp kick off the robocopy on Friday morning and by Monday the code appears even
+if Microsoft is late getting the code built on Friday, etc... 
 
-### Result
-Instead of having tests crash as the p: drive drops, we run tests and fill up the c: local folder
-and robocopy is running the background sync-ing files every 2 minutes to the shared folder.
-
-
+Robocopy has many other flags for a number of practical things that you deal with on windows.
 
 
 ## Tools
