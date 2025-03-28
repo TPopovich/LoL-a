@@ -62,10 +62,17 @@ robocopy k:\.  p:\.  /E  /MOT:2  /Z
 
 ```
 
-Later we can change robocopy to uses is nice logic to wait to run commands when shares are available,
-see its `/TBD :: Wait for sharenames To Be Defined` flag.  That can enable instead of using the `P:`
+Later we can change above robocopy command instead of just using p: to use the `share name` which I pitched
+to the test engineer; why? Robocopy has nice built in logic to wait to run copy commands to be 
+only done when shares are available!
+See its `/TBD :: Wait for sharenames To Be Defined` flag.  That can enable instead of using the `P:`
 share as a `drive` we use the share name and then robocopy will know to run commands only after
 it validates the share is accessible.
+A good case study on why /TBD is there, microsoft will create a new share for a daily build
+and people downstream in microsoft tech space, e.g. Dec/Compaq/Hp support windows-NT like OS on
+non intel chips and need to compile the code under agreement... so when a new daily build is available
+a `new share` is created like `daily_build_2025_03_28` and we can kick off a robocopy that will
+copy from the `as yet not created share naame` and it will begin work when the share is available.
 
 
 ### Result
