@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit
+	filesincommit = diff-tree --no-commit-id --name-only  -r
+	fic = diff-tree --no-commit-id --name-only  -r
