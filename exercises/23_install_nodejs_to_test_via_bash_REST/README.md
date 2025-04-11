@@ -99,6 +99,7 @@ For example, if you want your server to run on port 8000 instead of the default 
 ## Test the nodejs local server with a GET query
 
 ```
+##################################
 $ curl http://localhost:3000/notes
 
 ==> yields: ==>
@@ -114,6 +115,7 @@ $ curl http://localhost:3000/notes
 ## Test the nodejs local server with a POST query
 
 ```
+##################################
 $ curl -X POST http://localhost:3000/notes \
 > -H 'Content-type: application/json' \
 > -d '{"title": "This another note added via curl"}'
@@ -122,6 +124,7 @@ $ curl -X POST http://localhost:3000/notes \
 Next fetch all records again:
 
 ```
+##################################
 $ curl http://localhost:3000/notes
 
 ==> yields: ==>
@@ -140,3 +143,46 @@ $ curl http://localhost:3000/notes
 
 And so you can use curl from `bash` to do REST API calls.
 
+
+## Try to delete records
+
+```
+##################################
+$ curl http://localhost:3000/notes
+
+==> yields: ==>
+
+[
+  {
+    "id": "1",
+    "title": "HelloWorld"
+  },
+  {
+    "id": "6190",
+    "title": "This another note added via curl"
+  }
+]
+
+##################################
+$  curl -X DELETE http://localhost:3000/notes/6190
+
+==> yields: ==>
+
+{
+  "id": "6190",
+  "title": "This another note added via curl"
+}
+
+##################################
+$ curl http://localhost:3000/notes
+
+==> yields: ==>
+
+[
+  {
+    "id": "1",
+    "title": "HelloWorld"
+  }
+]
+
+```
