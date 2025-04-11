@@ -207,3 +207,11 @@ $ kill %3
 [3]-  Terminated              json-server --watch ~/data.json
 
 ```
+### Verify it is dead, try the same delete API:
+
+```
+$ curl  -X DELETE http://localhost:3000/notes/6190
+
+curl: (7) Failed to connect to localhost port 3000 after 0 ms: Couldn't connect to server
+
+```
