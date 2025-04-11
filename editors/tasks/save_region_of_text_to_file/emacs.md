@@ -13,3 +13,5 @@ Simulate doing `V` in `vim` and marking the lines and doing `:w filename` in ema
 ;; This will bind the function the keyboard * key
 (global-set-key [(kp-multiply)] #'write-region-to-file)
 ```
+
+For more on [keybinding in emacs](../bind_command_to_keystroke/emacs.md)
