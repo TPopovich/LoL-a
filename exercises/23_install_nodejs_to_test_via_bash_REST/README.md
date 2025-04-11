@@ -81,6 +81,7 @@ This will install the JSON server globally on your system. If you want to instal
 ## Run the json-server
 
 We setup data in `~/data.json` so we can run:
+NOTE: We spin the nodejs server in the `backgroud` below by using a `&` in the command!
 
 ```
 json-server --watch ~/data.json  &
@@ -184,5 +185,25 @@ $ curl http://localhost:3000/notes
     "title": "HelloWorld"
   }
 ]
+
+```
+
+## Stop the json test server running in nodejs
+
+We spun the nodejs server in the backgroud above by using a `&` in the command.  Lets find the job id.
+
+```
+$ jobs
+[1]+  Stopped                 vim 01_13_bash_advanced_topics_safety_01.txt  (wd: /mnt/c/work/git/LoL-a/slides/02_bash)
+[3]-  Running                 json-server --watch ~/data.json &
+```
+
+The job id is 3, kill it.
+
+```
+$ kill %3
+
+[1]+  Stopped                 vim 01_13_bash_advanced_topics_safety_01.txt  (wd: /mnt/c/work/git/LoL-a/slides/02_bash)
+[3]-  Terminated              json-server --watch ~/data.json
 
 ```
