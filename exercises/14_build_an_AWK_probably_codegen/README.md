@@ -1,3 +1,16 @@
+## Build a code generator
+
+### Input file format
+
+It has 2 columns, one is an azure region, other column is the azure framework name of the service fabric.
+
+See [regions.csv](./regions.csv) for Sample to use, the first line looks like:
+
+```
+westus,westus1-a-bz10
+```
+
+### Details
 We want a code generator to build a powershell function like this:
 
 ```
