@@ -16,7 +16,7 @@ This is a direct match for our standard recommended `lth` alias
 that does this in unix/linux:
 
 ```
-alias lth-="ls -rlt| tail "
+alias lth="ls -rlt| tail "
 
 so doing lth  or the actual pipeline that it represents does the same thing
 ```

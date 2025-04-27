@@ -56,7 +56,7 @@ HISTSIZE=2048; export HISTSIZE  # default is low usually 1024, we want double th
 
 alias d='dirs -v '
 alias p='pushd'
-alias lth-="ls -rlt| tail "
+alias lth="ls -rlt| tail "
 alias po=popd
 alias v=vim  # set to vi if vim does not exist
 
