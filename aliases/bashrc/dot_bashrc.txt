@@ -7,4 +7,5 @@ alias p='pushd'
 alias lth="ls -rlt| tail "
 alias po=popd
 alias v=vim
+alias fd=fdfind    # for ubuntu
 EOF
