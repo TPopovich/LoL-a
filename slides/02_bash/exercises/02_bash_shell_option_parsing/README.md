@@ -138,4 +138,18 @@ where you honor the -p and -w if given.
 Later if users give `-c` then you confirm the user "really wants to do the program"
 and you might use style `Want to run [Yn] ` as a prompt to default YES.
 
+TIP:  a good way to prompt is to use bash `printf` as that gives you full control
+on carriage returns (i.e. new lines) and allows something like this for a nice prompt:
 
+```
+printf `Want to run [Yn] `
+read answer 
+
+# above $answer will hold next line given as response to the prompt to default of
+# blank response is taken as yes
+```
+
+You can use `echo` bash command but in the early days different vendors of Unix 
+wrote their version of echo flags in different manners to try to keep it from
+doing a \n (newline).  Later release of ksh/bash included printf so users
+have full control on format. We use it since it does not automatically add a newline.
