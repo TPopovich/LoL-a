@@ -115,13 +115,20 @@ Sample calls a person can make:
 
 
 ```
-configure 
-configure -c
+If you script is called configure use that or use configure.sh as recommended
+bash configure.sh 
+bash configure.sh -c
 
-configure -p /usr/local -w small
-configure -p /usr/local -w small -c
-configure -w small -p /usr/local    # we support any ordering
+bash configure.sh -p /usr/local -w small
+bash configure.sh -p /usr/local -w small -c
+bash configure.sh -w small -p /usr/local    # we support any ordering
 ```
+
+Later on we will practice making a script executable by doing `chmod +x`. Here we
+are still using `bash xxx`.
+
+Still to make your script support later having an execute bit/flag, add `:` or a
+`shebang` as the first line of your script as well as we usually do.
 
 The program on first pass does not have to honor the `-c` flag.  So get the first part
 working first.
