@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grep Flags Comparison: -e vs -E vs -P</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --code-bg: #0f172a;
+            --code-text: #38bdf8;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .table-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 600;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .flag-badge {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: var(--primary);
+            font-family: 'ui-monospace', 'SFMono-Regular', Consolas, monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid #bfdbfe;
+        }
+
+        code {
+            font-family: 'ui-monospace', 'SFMono-Regular', Consolas, monospace;
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 640px) {
+            .table-card {
+                overflow-x: auto;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Understanding <code>grep</code> Flags</h1>
+            <p class="subtitle">A side-by-side comparison of <code>-e</code>, <code>-E</code>, and <code>-P</code></p>
+        </header>
+
+        <main>
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Flag</th>
+                            <th style="width: 45%;">Purpose</th>
+                            <th style="width: 40%;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="flag-badge">-e</span></td>
+                            <td>Specifies a pattern string (great for patterns starting with <code>-</code> or multiple patterns)</td>
+                            <td><code>grep -e "-test" -e "error" file.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-badge">-E</span></td>
+                            <td>Enables Extended Regex (cleaner <code>|</code>, <code>+</code>, <code>?</code>, <code>{}</code>)</td>
+                            <td><code>grep -E "cat|dog" file.txt</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-badge">-P</span></td>
+                            <td>Enables PCRE Regex (adds <code>\d</code>, <code>\s</code>, lookarounds, non-greedy matching)</td>
+                            <td><code>grep -P "(?&lt;=id=)\d+" file.txt</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
